@@ -119,14 +119,6 @@
       "name": "JKite"
     },
     {
-      "description": "Model JLocation",
-      "name": "JLocation"
-    },
-    {
-      "description": "Model JLocationState",
-      "name": "JLocationState"
-    },
-    {
       "description": "Model JLog",
       "name": "JLog"
     },
@@ -1048,43 +1040,6 @@
         "createdAt": {
           "type": "string",
           "format": "date"
-        }
-      }
-    },
-    "JLocation": {
-      "type": "object",
-      "properties": {
-        "zip": {
-          "type": "string"
-        },
-        "city": {
-          "type": "string"
-        },
-        "state": {
-          "type": "string"
-        },
-        "stateCode": {
-          "type": "string"
-        },
-        "county": {
-          "type": "string"
-        },
-        "countryCode": {
-          "type": "string"
-        }
-      }
-    },
-    "JLocationState": {
-      "type": "object",
-      "properties": {
-        "countryCode": {
-          "type": "string"
-        },
-        "stateCode": {
-          "type": "string"
-        },
-        "state": {
-          "type": "string"
         }
       }
     },
@@ -6332,118 +6287,6 @@
             "description": "OK",
             "schema": {
               "$ref": "#/definitions/JKite"
-            }
-          }
-        }
-      }
-    },
-    "/remote.api/JLocation.importAll": {
-      "post": {
-        "tags": [
-          "JLocation"
-        ],
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [],
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "Request processed succesfully",
-            "schema": {
-              "$ref": "#/definitions/DefaultResponse"
-            }
-          },
-          "401": {
-            "description": "Unauthorized request",
-            "schema": {
-              "$ref": "#/definitions/UnauthorizedRequest"
-            }
-          }
-        }
-      }
-    },
-    "/remote.api/JLocation.importStates": {
-      "post": {
-        "tags": [
-          "JLocation"
-        ],
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [],
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "Request processed succesfully",
-            "schema": {
-              "$ref": "#/definitions/DefaultResponse"
-            }
-          },
-          "401": {
-            "description": "Unauthorized request",
-            "schema": {
-              "$ref": "#/definitions/UnauthorizedRequest"
-            }
-          }
-        }
-      }
-    },
-    "/remote.api/JLocation.one": {
-      "post": {
-        "tags": [
-          "JLocation"
-        ],
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/parameters/bodyParam"
-          }
-        ],
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "Request processed succesfully",
-            "schema": {
-              "$ref": "#/definitions/DefaultResponse"
-            }
-          },
-          "401": {
-            "description": "Unauthorized request",
-            "schema": {
-              "$ref": "#/definitions/UnauthorizedRequest"
-            }
-          }
-        }
-      }
-    },
-    "/remote.api/JLocation.fetchStatesByCountryCode": {
-      "post": {
-        "tags": [
-          "JLocation"
-        ],
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/parameters/bodyParam"
-          }
-        ],
-        "description": "Method JLocation.fetchStatesByCountryCode",
-        "responses": {
-          "200": {
-            "description": "Request processed succesfully",
-            "schema": {
-              "$ref": "#/definitions/DefaultResponse"
-            }
-          },
-          "401": {
-            "description": "Unauthorized request",
-            "schema": {
-              "$ref": "#/definitions/UnauthorizedRequest"
             }
           }
         }
